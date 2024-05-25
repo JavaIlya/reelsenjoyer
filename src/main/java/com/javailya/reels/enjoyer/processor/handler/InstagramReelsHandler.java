@@ -5,16 +5,17 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.DeleteMessage;
 import com.pengrad.telegrambot.request.SendMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class InstagramReelsHandler implements UpdatesHandler {
 
     private static final String REELS_PATTERN = "https://www.instagram.com/reel/";
     private static final String INSTAGRAM = "instagram";
     private static final String INSTAGRAM_WITH_PREFIX = "ddinstagram";
-
-    private final String RESPONSE_PATERN = "%s поділився(лась) рілзом %s";
+    private final String RESPONSE_PATERN = "%s поділи(вся/лась) рілзом %s";
 
     @Override
     public boolean validHandler(String message) {
