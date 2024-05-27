@@ -16,7 +16,7 @@ public class InstagramReelsHandler implements UpdatesHandler {
     private static final String POST_PATTERN = "https://www.instagram.com/p/";
     private static final String INSTAGRAM = "instagram";
     private static final String INSTAGRAM_WITH_PREFIX = "ddinstagram";
-    private final String RESPONSE_PATERN = "%s кидає рілз %s";
+    private static final String RESPONSE_PATERN = "%s кидає рілз %s";
 
     @Override
     public boolean validHandler(String message) {
