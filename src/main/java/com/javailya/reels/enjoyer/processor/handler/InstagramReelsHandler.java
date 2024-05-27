@@ -20,7 +20,7 @@ public class InstagramReelsHandler implements UpdatesHandler {
 
     @Override
     public boolean validHandler(String message) {
-        return message.startsWith(REELS_PATTERN)|| message.startsWith(POST_PATTERN);
+        return message.contains(REELS_PATTERN)|| message.contains(POST_PATTERN);
     }
 
     @Override
