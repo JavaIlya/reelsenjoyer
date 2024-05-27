@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class InstagramReelsHandler implements UpdatesHandler {
 
     private static final String REELS_PATTERN = "https://www.instagram.com/reel/";
-    private static final String POST_PATTERN = "https://www.ddinstagram.com/p/";
+    private static final String POST_PATTERN = "https://www.instagram.com/p/";
     private static final String INSTAGRAM = "instagram";
     private static final String INSTAGRAM_WITH_PREFIX = "ddinstagram";
     private final String RESPONSE_PATERN = "%s поділи(вся/лась) рілзом %s";
