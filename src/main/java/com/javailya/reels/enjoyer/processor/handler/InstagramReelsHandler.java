@@ -28,10 +28,16 @@ public class InstagramReelsHandler implements UpdatesHandler {
         Message message = update.message();
         Long chatId = message.chat().id();
         String text = message.text();
+        String firstName;
+        if (message.from().firstName() != null && message.from().firstName().equals("Oleksandr")) {
+            firstName = "Oleg";
+        } else {
+            firstName = message.from().firstName();
+        }
 
         String responseLink = text.replace(INSTAGRAM, INSTAGRAM_WITH_PREFIX);
 
         bot.execute(new DeleteMessage(chatId, message.messageId()));
-        bot.execute(new SendMessage(chatId, String.format(RESPONSE_PATERN, message.from().firstName(), responseLink)));
+        bot.execute(new SendMessage(chatId, String.format(RESPONSE_PATERN, firstName, responseLink)));
     }
 }
